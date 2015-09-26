@@ -12,6 +12,9 @@ class ViewController: UIViewController {
     
     //Time variable
     var time = 0
+    let SEC_PER_MIN = 60
+    let SEC_PER_HOUR = 3600
+    
     var timer = NSTimer()
     
     // Start timer
@@ -29,7 +32,7 @@ class ViewController: UIViewController {
     @IBAction func resetButton(sender: AnyObject) {
         timer.invalidate()
         time = 0
-        timeDisplay.text = String(time)
+        timeDisplay.text = "00:00:00"
         
     }
     
@@ -37,7 +40,12 @@ class ViewController: UIViewController {
     @IBOutlet var timeDisplay: UILabel!
 
     func result () {
-        timeDisplay.text = String(time++)
+        time++
+        let secLeft = time % SEC_PER_MIN
+        let minutes = time / SEC_PER_MIN
+        let minLeft = minutes % SEC_PER_MIN
+        let hour = minutes / SEC_PER_HOUR
+        timeDisplay.text = String(format: "%02d", hour) + ":" + String(format: "%02d", minLeft) + ":" + String(format: "%02d", secLeft)
     }
 
     
@@ -46,7 +54,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // Counter time display
-        timeDisplay.text = String(time)
+        timeDisplay.text = "00:00:00"
     
     }
 

@@ -16,18 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qH-vK-iqC">
-                                <rect key="frame" x="224" y="277" width="153" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qH-vK-iqC">
+                                <rect key="frame" x="144" y="247" width="313" height="105"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="153" id="221-bY-EmC"/>
-                                    <constraint firstAttribute="height" constant="46" id="aeS-Zq-Z0d"/>
+                                    <constraint firstAttribute="height" constant="105" id="7NV-kN-exh"/>
+                                    <constraint firstAttribute="width" constant="313" id="eGz-hy-jbH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="82"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AO-6H-BcX">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lFP-qa-qCv">
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Reset" id="fkP-ea-dfs">
+                                        <connections>
+                                            <action selector="resetButton:" destination="BYZ-38-t0r" id="gGB-YA-5R6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jv4-FA-Uai">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Timer" id="nWx-xZ-5tw">
                                         <barButtonItem key="leftBarButtonItem" title="Start" id="w3s-Uy-su3">
@@ -45,28 +60,17 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AO-6H-BcX">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lFP-qa-qCv"/>
-                                    <barButtonItem title="Reset" id="fkP-ea-dfs">
-                                        <connections>
-                                            <action selector="resetButton:" destination="BYZ-38-t0r" id="gGB-YA-5R6"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.60433416136237339" green="0.76270807099074489" blue="0.8159179688" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="7qH-vK-iqC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Az-ic-O7C"/>
+                            <constraint firstItem="7qH-vK-iqC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D4b-CU-0Tb"/>
                             <constraint firstItem="Jv4-FA-Uai" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Oxj-p4-dq7"/>
+                            <constraint firstItem="7qH-vK-iqC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PLY-7d-RE0"/>
                             <constraint firstItem="7AO-6H-BcX" firstAttribute="leading" secondItem="Jv4-FA-Uai" secondAttribute="leading" id="btr-W4-qH9"/>
                             <constraint firstItem="7AO-6H-BcX" firstAttribute="trailing" secondItem="Jv4-FA-Uai" secondAttribute="trailing" id="cBn-ra-fbk"/>
                             <constraint firstAttribute="trailing" secondItem="7AO-6H-BcX" secondAttribute="trailing" id="daz-2u-bLk"/>
                             <constraint firstItem="7AO-6H-BcX" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="sVT-HO-QtK"/>
                             <constraint firstItem="Jv4-FA-Uai" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w8Q-UH-922"/>
-                            <constraint firstItem="7qH-vK-iqC" firstAttribute="centerX" secondItem="Jv4-FA-Uai" secondAttribute="centerX" id="xYS-St-IOK"/>
                         </constraints>
                     </view>
                     <connections>
