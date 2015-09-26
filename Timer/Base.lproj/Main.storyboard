@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qH-vK-iqC">
+                                <rect key="frame" x="224" y="277" width="153" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="221-bY-EmC"/>
+                                    <constraint firstAttribute="height" constant="46" id="aeS-Zq-Z0d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jv4-FA-Uai">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Timer" id="nWx-xZ-5tw">
+                                        <barButtonItem key="leftBarButtonItem" title="Start" id="w3s-Uy-su3">
+                                            <color key="tintColor" red="0.25098039220000001" green="0.59215686270000001" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="startTimer:" destination="BYZ-38-t0r" id="hQs-yc-gPg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Stop" id="Kp8-FG-fRo">
+                                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="stopTimer:" destination="BYZ-38-t0r" id="54d-TQ-4wN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AO-6H-BcX">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lFP-qa-qCv"/>
+                                    <barButtonItem title="Reset" id="fkP-ea-dfs">
+                                        <connections>
+                                            <action selector="resetButton:" destination="BYZ-38-t0r" id="gGB-YA-5R6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7qH-vK-iqC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Az-ic-O7C"/>
+                            <constraint firstItem="Jv4-FA-Uai" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Oxj-p4-dq7"/>
+                            <constraint firstItem="7AO-6H-BcX" firstAttribute="leading" secondItem="Jv4-FA-Uai" secondAttribute="leading" id="btr-W4-qH9"/>
+                            <constraint firstItem="7AO-6H-BcX" firstAttribute="trailing" secondItem="Jv4-FA-Uai" secondAttribute="trailing" id="cBn-ra-fbk"/>
+                            <constraint firstAttribute="trailing" secondItem="7AO-6H-BcX" secondAttribute="trailing" id="daz-2u-bLk"/>
+                            <constraint firstItem="7AO-6H-BcX" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="sVT-HO-QtK"/>
+                            <constraint firstItem="Jv4-FA-Uai" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w8Q-UH-922"/>
+                            <constraint firstItem="7qH-vK-iqC" firstAttribute="centerX" secondItem="Jv4-FA-Uai" secondAttribute="centerX" id="xYS-St-IOK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timeDisplay" destination="7qH-vK-iqC" id="XRv-m6-loU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="387"/>
+        </scene>
+    </scenes>
+</document>
